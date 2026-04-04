@@ -7,4 +7,4 @@ def calculate_total(price, tax_rate, discount):
 
 
 def format_message(prefix, value):
-    return f"{prefix}: ${value}"
+    return f"{prefix}: ${value: .2f}"
