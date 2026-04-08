@@ -14,20 +14,6 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 # put in Python search module
 sys.path.append(str(BASE_DIR))
 
-from shared.config import (  # type: ignore
-    RABBITMQ_HOST,
-    RABBITMQ_PORT,
-    RABBITMQ_USER,
-    RABBITMQ_PASSWORD,
-    PROCESSING_SECONDS,
-    TIMEOUT_SECONDS,  # Timeout Fail
-    RETRY_BACKOFF_SECONDS,
-    DEAD_LETTER_QUEUE,
-    MAX_RETRIES,
-)
-from shared.logger import log_event  # type: ignore
-from shared.metrics_store import update_metrics  # type: ignore # filelock
-
 
 def process_message(body: bytes, service_name: str):
 
