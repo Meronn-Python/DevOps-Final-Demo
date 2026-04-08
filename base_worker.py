@@ -79,7 +79,7 @@ def process_message(body: bytes, service_name: str):
     if force_fail:
         raise RuntimeError("Simulated delivery failure")
     if force_timeout:
-        time.sleep(TIMEOUT_SECONDS + 1)
+        time.sleep(TIMEOUT_SECONDS + 3)
         raise TimeoutError(
             f"Simulated timeout: processing exceeded {TIMEOUT_SECONDS} seconds"
         )
